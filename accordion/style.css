@@ -1,0 +1,108 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+/* 
+MAIN Color:
+GREY Color:
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ------------------------ */
+/* GENERAL STYLES */
+/* ------------------------ */
+body {
+  font-family: 'Inter', sans-serif;
+  color: #343a40;
+  line-height: 1;
+}
+
+/* Accordion Component */
+.accordion {
+  width: 700px;
+  margin: 100px auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.item {
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+}
+
+.item-head {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 24px;
+  padding: 24px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.number,
+.text {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.number {
+  color: #ced4da;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+
+  /* Me - udemy: */
+  transition: transform 150ms linear;
+}
+
+/* Me - udemy: */
+.icon-rotate {
+  stroke: #087f5b;
+  transform: rotate(-180deg);
+  transition: transform 150ms linear;
+}
+
+.hidden-box {
+  margin: 8px auto 32px auto;
+  width: 554px;
+  display: none;
+}
+
+.hidden-box p {
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.hidden-box ul {
+  color: #868e96;
+  margin-left: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.open {
+  border-top: 4px solid #087f5b;
+}
+
+.open .hidden-box {
+  display: block;
+}
+
+.open .number,
+.open .text {
+  color: #087f5b;
+}
